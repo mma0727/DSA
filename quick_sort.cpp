@@ -20,12 +20,11 @@ int partition(std::vector<T>& vec, const int& left, const int& right) {
 	return j;
 }
 template <class T>
-void quick_sort(std::vector<T>& vec, const int left, const int right) {
+void quick_sort(std::vector<T>& vec, const int& left, const int& right) {
 	if (left >= right) {
 		return;
 	}
 	int pivot_index = partition(vec, left, right);
-	std::cout << pivot_index << " ";
 	quick_sort(vec,left, pivot_index-1);
 	quick_sort(vec, pivot_index+1, right);
 }
